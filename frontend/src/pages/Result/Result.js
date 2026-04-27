@@ -65,10 +65,15 @@ function Result() {
         <div className="metrics-section">
           <div className="metric-item">
             <span className="metric-label">Match Score</span>
+            <div className="score-display" style={{color: scoreColor}}>
+              <span className="score-emoji">{scoreEmoji}</span>
+              <span className="score-status">{scoreStatus}</span>
+            </div>
             <div className="progress-bar">
               <div className="progress-fill" style={{width: `${matchPercentage}%`, backgroundColor: scoreColor}}></div>
             </div>
             <span className="metric-value">{matchPercentage}%</span>
+            <p className="score-advice">{scoreAdvice}</p>
           </div>
           <div className="metric-row">
             <div className="metric-box">
